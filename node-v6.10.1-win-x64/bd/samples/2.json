@@ -1,0 +1,13 @@
+{
+  "type": "replacement",
+  "regex": "/a+b*/ig",
+  "description": "Recusandae delectus dolorum magni, veritatis aliquam deserunt repellat, esse tempore, quod consequatur et cum porro dolore doloribus odit laborum molestias earum est impedit consequuntur eaque facere ullam sunt alias ipsa.",
+  "replace": "TTTTT",
+  "values": [
+    { "value": "aaaaaaaacdsdc", "expectation": "TTTTTcdsdc", "answer": "TTTTTcdsdc" },
+    { "value": "aaaaabbbb", "expectation": "TTTTTcdsdc", "answer": "TTTTT" },
+    { "value": "cdsfdfsd", "expectation": "TTTTTcdsdc", "answer": "cdsfdfsd" },
+    { "value": "AAAAAAAA", "expectation": "TTTTT", "answer": "TTTTT" },
+    { "value": "aBBB", "expectation": "TTTTTcdsdc", "answer": "TTTTT" }
+  ]
+}

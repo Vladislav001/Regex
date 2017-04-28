@@ -1,0 +1,13 @@
+{
+  "type": "comparison",
+  "regex": "/a+/ig",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae labore nemo modi sit qui earum perferendis non id. Doloremque quis minima, dolorem nobis nam asperiores excepturi laboriosam. Magni, fugit, id.",
+  "values": [
+    { "value": "aaaaaaaa", "answer": 1 },
+    { "value": "aaaaabbbb", "answer": 0 },
+    { "value": "cdsfdfsd", "answer": 0 },
+    { "value": "AAAAAAAA", "answer": 1 },
+    { "value": "AAAAAAAA", "answer": 1 },
+    { "value": "ФФФФФФ", "answer": 0 }
+  ]
+}

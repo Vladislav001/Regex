@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regexp tester</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="import" href="/catalog.html">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <script language="JavaScript">
+<!--//
+startday = new Date();
+clockStart = startday.getTime();
+
+function initStopwatch() {
+var myTime = new Date();
+var timeNow = myTime.getTime();
+var timeDiff = timeNow - clockStart;
+this.diffSecs = timeDiff/1000;
+return(this.diffSecs); }
+
+function getSecs() {
+var mySecs = initStopwatch();
+var mySecs1 = ""+mySecs;
+mySecs1= mySecs1.substring(0,mySecs1.indexOf(".")) + " сек.";
+document.forms[0].timespent.value = mySecs1
+window.setTimeout('getSecs()',1000); }
+// -->
+</script>
+
+</head>
+<body onload="window.setTimeout('getSecs()',1)">
+  <!-- БЛОК 1-ГО МЕНЮ НАЧАЛО -->
+  <nav class="navbar navbar-default menu">
+    <!-- Содержимое 1-го меню (соц.сети + аутентификация) -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left icons">
+        <li><a href="https://vk.com/vladiclav001" target="_blank" title="VK"><img src="imagesStandart/vk.png"></a></li>
+        <li><a href="https://vk.com/vladiclav001" target="_blank" title="Facebook"><img src="imagesStandart/facebook.png"></a></li>
+        <li><a href="https://vk.com/vladiclav001" target="_blank" title="Twitter"><img src="imagesStandart/twitter.png"></a></li>
+        <li><a href="https://vk.com/vladiclav001" target="_blank" title="Instagram"><img src="imagesStandart/instagram.png"></a></li>
+        <li><a href="#" target="_blank" title="YouTube"><img src="imagesStandart/youtube.png"></a></li>
+        <li><a href="#" target="_blank" title="Google+"><img src="imagesStandart/google_plus.png"></a></li>
+      </ul>
+        </div>
+      </nav>
+      <!-- БЛОК 1-ГО МЕНЮ КОНЕЦ-->
+  <header>
+
+<!-- КАРТИНКА С ЛОГО САЙТА -->
+    <h1>Regexp tester - test your regex</h1>
+  </header>
+  <section>
+    <div class="head-load">
+      <div class="button-group">
+        <a onclick="getComparison()" role="button" class="button add-button">
+          <span>Comparison</span>
+        </a>
+        <a onclick="getReplacement()" role="button" class="button add-button">
+          <span>Replacement</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="description"></div><!-- /#description -->
+    <div class="conditions">
+      <div class="field-opacity field-group field-show">
+        <label for="find">RegExp expression</label>
+        <textarea id="find" placeholder="/regexp here/i"></textarea>
+      </div>
+      <div class="field-opacity field-group">
+        <label for="replacement">Replace with</label>
+        <textarea id="replacement" placeholder="Replacement string"></textarea>
+      </div>
+    </div><!-- /.conditions -->
+    <div class="head-samples">
+      <h3 class="header-h3">Test cases</h3>
+      <div class="button-group">
+        <a id="add" role="button" class="button anim-button add-button">
+          <span>add</span>
+          <div class="icon">
+            <i class="fa fa-plus"></i>
+          </div>
+        </a>
+
+        <a id="delete" role="button" class="button anim-button delete-button">
+          <span>remove</span>
+          <div class="icon">
+            <i class="fa fa-remove"></i>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div id="cases">
+
+    </div>
+
+  </section>
+  <form><div>Вы на странице <input type="text" size="20" name="timespent" onfocus="this.blur()" style="font-family: sans-serif; text-align: left; background-color: fff; color: black; border: thin"></div></form>
+
+  <!-- ПОДВАЛ САЙТА НАЧАЛО-->
+<div class="footer-all">
+<footer>
+  <div class="footer-left"><h3>Кратко о сайте</h3>
+    Этот сайт предназначен для проверки регулярных<br>
+    выражений
+  </div>
+  </footer>
+  <div id="scrollup"><img alt="Прокрутить вверх" src="imagesStandart/scrollup.png"></div>
+</div>
+<!-- ПОДВАЛ САЙТА КОНЕЦ-->
+
+
+  <script src="script.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='js/scrollup.js'></script>
+</body>
+</html>
